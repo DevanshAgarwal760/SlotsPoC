@@ -57,6 +57,8 @@ public class BigWin
 		driver.findElement(By.xpath("(//input[@id='transferInput'])[1]")).clear();
 		driver.findElement(By.xpath("(//input[@id='transferInput'])[1]")).sendKeys("1000");
 		driver.findElement(By.xpath("//div[@class='Transfer_Ok_but']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@class='Transfer_Ok_but']")).click();
 		Thread.sleep(10000);
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='canvasWrapper']//canvas")));
 		
