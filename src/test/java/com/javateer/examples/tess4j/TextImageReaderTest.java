@@ -1,7 +1,7 @@
 package com.javateer.examples.tess4j;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.internal.util.reflection.Whitebox.setInternalState;
+import static org.testng.Assert.assertEquals;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import net.sourceforge.tess4j.Tesseract;
 
 public class TextImageReaderTest {
-
+//1 
   private Tesseract tesseract;
 
   private TextImageReader textImageReader;
