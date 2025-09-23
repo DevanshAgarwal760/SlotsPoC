@@ -13,7 +13,7 @@ public class TC_LaunchGame
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@When("User searches and launches the game.")
+	@When("User searches and launches the game")
 	public void user_searches_and_launches_the_game() 
 	{
 	    // Write code here that turns the phrase above into concrete actions

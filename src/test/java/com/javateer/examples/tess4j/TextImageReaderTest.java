@@ -1,6 +1,5 @@
 package com.javateer.examples.tess4j;
 
-import static org.mockito.internal.util.reflection.Whitebox.setInternalState;
 import static org.testng.Assert.assertEquals;
 
 import java.awt.image.BufferedImage;
@@ -10,7 +9,6 @@ import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
 
-import org.junit.Before;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 

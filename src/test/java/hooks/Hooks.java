@@ -63,7 +63,7 @@ public class Hooks
     	String accID=p.getProperty("accID");
     	String accPwd=p.getProperty("accPwd");
     	driver.get(url);
-		driver.findElement(By.xpath("//input[@placeholder='Email / Mobile / CardNo']")).sendKeys(accID);
+    	driver.findElement(By.xpath("//input[@placeholder='Email / Mobile / CardNo']")).sendKeys(accID);
 		driver.findElement(By.xpath("//input[@placeholder='Password / Card Pin']")).sendKeys(accPwd);
 		driver.findElement(By.xpath("//input[@class='loginActive']")).click();
 		////i[@ng-click='DayValShow=false']
