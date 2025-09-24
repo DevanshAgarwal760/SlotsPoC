@@ -1,13 +1,19 @@
 package Utilities;
 
+import java.awt.AWTException;
+import java.io.IOException;
+
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 
 public class OCR 
 {
 	public static String extractedTxt;
-	public static void extractTxt() 
+	public static String extractTxt(int x,int y,int width,int height) throws AWTException, IOException
 	{
+		ScreenshotCapture.captureFullSS();
+		ScreenshotCapture.captureSubSS(x,y,width,height);
+		
 		try 
 		{
             ITesseract tesseract = new Tesseract();
@@ -17,7 +23,7 @@ public class OCR
             tesseract.setLanguage("eng");
 
             extractedTxt = tesseract.doOCR(ScreenshotCapture.subImageFile);
-            
+                        
             /* implementation of OCR
             double value = Double.parseDouble(extractedOCR.replace(",", ""));
             System.out.println(value);
@@ -28,5 +34,6 @@ public class OCR
 		{
             e.printStackTrace();
         }
+		return extractedTxt;
 	}
 }

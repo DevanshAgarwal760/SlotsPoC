@@ -97,7 +97,8 @@ public class BigWin
             // Capture full screen
             BufferedImage fullImage = robot.createScreenCapture(screenRect);
             ImageIO.write(fullImage, "png", imageFile);
-            BufferedImage croppedImage = fullImage.getSubimage(460, 880, 142, 34);
+            //BufferedImage croppedImage = fullImage.getSubimage(460, 880, 142, 34);516,905,35,17
+            BufferedImage croppedImage = fullImage.getSubimage(516, 915, 35, 17);
             ImageIO.write(croppedImage, "png", subImageFile);
             
             // Save to file
@@ -115,9 +116,10 @@ public class BigWin
             tesseract.setLanguage("eng");
 
             String result = tesseract.doOCR(subImageFile);
-            double value = Double.parseDouble(result.replace(",", ""));
-            System.out.println(value);
-            System.out.println("OCR Result: " + value);
+            System.out.println(result);
+            //double value = Double.parseDouble(result.replace(",", ""));
+            //System.out.println(value);
+            //System.out.println("OCR Result: " + value);
         } catch (Exception e) {
             e.printStackTrace();
         }

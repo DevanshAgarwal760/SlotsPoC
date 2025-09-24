@@ -1,1 +1,1 @@
-1. Need to create a login method and run it before each scenario.
+1. there is a 8 pixel difference in yaxis in taking ocr normally and when it is run in automation. So add 8 to y axis value and pass it in the OCR method.
